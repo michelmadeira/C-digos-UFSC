@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>assets/BOOST_GAUGE.png</file>
+        <file>assets/BOOST_POINTER.png</file>
+        <file>assets/GASPEDAL.png</file>
+        <file>assets/logo.png</file>
+        <file>assets/RPM_GAUGE.png</file>
+        <file>assets/RPM_POINTER.png</file>
+        <file>examples/Calibra_LOG.csv</file>
+        <file>assets/ICON.png</file>
+        <file>assets/BG.png</file>
+        <file>assets/LOGO_SMALL.png</file>
+    </qresource>
+</RCC>
