@@ -244,7 +244,7 @@ void MainWindow::on_OK_clicked()
 
 void MainWindow::on_actionReadme_triggered()
 {
-    QDesktopServices::openUrl(QUrl("https://drive.google.com/file/d/1cX4v_yBvv1gS5j-fMZtUBD2hePU4LPDx/view?usp=sharing"));  //Abre o arquivo externo README.
+    QDesktopServices::openUrl(QUrl("https://drive.google.com/file/d/11uaIqQ8IJrqH7QstqYlvhOJ7WJc2MQQu/view?usp=sharing"));  //Abre o arquivo externo README.
 }
 
 void MainWindow::on_Back_clicked()
