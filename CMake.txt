@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(CMake_Clanmetria LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+
+find_package(Qt5Widgets REQUIRED)
+
+
+set(SOURCES
+    boostgauge.cpp
+    csv_read.cpp
+    gaspedal.cpp
+    main.cpp
+    mainwindow.cpp
+    RPMGauge.cpp)
+
+set(HEADERS
+    boostgauge.h
+    csv_read.h
+    gaspedal.h
+    mainwindow.h
+    RPMGauge.h)
+
+set(UI mainwindow.ui)
+
+add_executable(CMake_Clanmetria ${SOURCES} ${HEADERS} ${UI} assets.qrc)
+target_link_libraries(CMake_Clanmetria Qt5::Widgets)

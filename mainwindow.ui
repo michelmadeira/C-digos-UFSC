@@ -230,6 +230,19 @@ p, li { white-space: pre-wrap; }
      <string>BACK</string>
     </property>
    </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>470</y>
+      <width>391</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
    <zorder>labelLogo</zorder>
    <zorder>graphicView</zorder>
    <zorder>TextOpenCsv</zorder>
@@ -239,6 +252,7 @@ p, li { white-space: pre-wrap; }
    <zorder>runButton</zorder>
    <zorder>textTps</zorder>
    <zorder>Back</zorder>
+   <zorder>progressBar</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

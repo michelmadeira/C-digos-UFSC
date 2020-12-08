@@ -48,6 +48,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->runButton->setVisible(false);
     ui->textTps->setVisible(false);
     ui->Back->setVisible(false);
+    ui->progressBar->setVisible(false);
 
     ui->labelLogo->setGeometry(MainWindow::rect());     //Seta o tamanho do elemento labellogo para coincidir com o tamanho da janela do programa.
     MainWindow::setWindowIcon(icon);                    //Seta o ícone da janela do programa como o ícone carregado.
@@ -175,6 +176,9 @@ void MainWindow::on_runButton_clicked()
 {
     ui->runButton->setVisible(false);
     ui->textTps->setVisible(true);
+    ui->progressBar->setMinimum(0);
+    ui->progressBar->setMaximum(CSV_read::Time.size());
+    ui->progressBar->setVisible(true);
 
     MainWindow::counterSet1=0;                                          //Seta a variável para o corresponder ao índice zero no arquivo.
 
@@ -197,6 +201,7 @@ void MainWindow::run()
     p.Pedal->setScale((-0.002*CSV_read::TPS[MainWindow::counterSet1])+0.6);
     ui->textTps->setText("% " + CSV_read::TPSText[MainWindow::counterSet1]);
 
+    ui->progressBar->setValue(MainWindow::counterSet1);
 
     if (CSV_read::Time[counterSet1] == CSV_read::Time.last()){          //Libera o botão voltar quando todo o arquivo foi percorrido.
         ui->Back->setVisible(true);
